@@ -7,5 +7,5 @@ set number
 syntax on
 map <space>tn :tabnext<CR>
 map <space>tp :tabprevious<CR>
-map <space>t :tabnew<CR>
+map <space>tt :tabnew<CR>
 map <space>w :w<CR>
