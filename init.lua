@@ -1,10 +1,3 @@
--- Personal Configs
-vim.keymap.set('n', '<space>tt', ':tabnew<cr>', { desc = 'Open empty tab' })
-vim.keymap.set('n', '<space>tn', ':tabnext<cr>', { desc = 'Go to next tab' })
-vim.keymap.set('n', '<space>tp', ':tabprevious<cr>', { desc = 'Go to previous tab' })
-vim.keymap.set('n', '<space>w', ':w<cr>', { desc = 'Save file' })
-vim.o.shiftwidth = 4
-vim.o.tabstop = 4
 --[[
 
 =====================================================================
@@ -433,7 +426,7 @@ vim.keymap.set('n', '<leader>sr', require('telescope.builtin').resume, { desc = 
 vim.defer_fn(function()
   require('nvim-treesitter.configs').setup {
     -- Add languages to be installed here that you want installed for treesitter
-    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'elixir' },
+    ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'tsx', 'javascript', 'typescript', 'vimdoc', 'vim', 'bash', 'elixir'},
 
     -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
     auto_install = false,
@@ -672,6 +665,14 @@ cmp.setup {
   },
 }
 
+-- Personal Configs
+vim.keymap.set('n', '<space>tt', ':tabnew<cr>', { desc = 'Open empty tab' })
+vim.keymap.set('n', '<space>tn', ':tabnext<cr>', { desc = 'Go to next tab' })
+vim.keymap.set('n', '<space>tp', ':tabprevious<cr>', { desc = 'Go to previous tab' })
+vim.keymap.set('n', '<space>w', ':w<cr>', { desc = 'Save file' })
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+vim.o.expandtab = true
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 
